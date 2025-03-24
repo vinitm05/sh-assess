@@ -1,16 +1,18 @@
 const express = require("express");
-const users = require("./routes/User.routes");
-const products = require("./routes/Product.routes");
-const cart = require("./routes/Cart.routes");
-
 const app = express();
 
-app.use("/users", users);
-app.use("/products",products);
-app.use("/cart",cart);
-app.use("/*", (req, res, next) => {
-  res.send("Page not found");
-  next();
-});
+// Import route files
+const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
+const cartRoutes = require("./routes/cartRoutes");
 
-app.listen(3000);
+// Use routes
+app.use("/users", userRoutes);
+app.use("/products", productRoutes);
+app.use("/cart", cartRoutes);
+
+// Start the server
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

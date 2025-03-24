@@ -1,13 +1,13 @@
-const getUser = (req, res) => {
-  res.send("Fetching all users");
-}
+// Controller for Users
 
-const addUser = (req, res) => {
+exports.getAllUsers = (req, res) => {
+  res.send("Fetching all users");
+};
+
+exports.addUser = (req, res) => {
   res.send("Adding a new user");
 };
 
-const getUserById = (req, res) => {
+exports.getUserById = (req, res) => {
   res.send(`Fetching user with ID: ${req.params.id}`);
 };
-
-module.exports = {getUser, addUser, getUserById}

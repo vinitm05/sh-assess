@@ -1,9 +1,9 @@
-const getCart = (req, res) => {
-  res.send(`Fetching cart for user with ID: ${req.params.userId}`);
-}
+// Controller for Cart
 
-const addCart = (req, res) => {
-  res.send(`Adding product to cart for user with ID: ${req.params.userId}`);
+exports.getCartForUser = (req, res) => {
+  res.send(`Fetching cart for user with ID: ${req.params.userId}`);
 };
 
-module.exports = {getCart, addCart}
+exports.addProductToCart = (req, res) => {
+  res.send(`Adding product to cart for user with ID: ${req.params.userId}`);
+};
