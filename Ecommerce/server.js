@@ -7,9 +7,9 @@ const productRoutes = require("./routes/Product.routes");
 const cartRoutes = require("./routes/Cart.routes");
 
 // Use routes
-app.use("/users", userRoutes);
-app.use("/products", productRoutes);
-app.use("/cart", cartRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
 
 // Start the server
 const PORT = 3000;
