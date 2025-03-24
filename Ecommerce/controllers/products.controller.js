@@ -1,7 +1,7 @@
-// Controller for Products
+const path = require("path");
 
 exports.getAllProducts = (req, res) => {
-  res.send("Fetching all products");
+  res.sendFile(path.join(__dirname, "..", "views", "products.html"));
 };
 
 exports.addProduct = (req, res) => {

@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 
 // Import route files
-const userRoutes = require("./routes/userRoutes");
-const productRoutes = require("./routes/productRoutes");
-const cartRoutes = require("./routes/cartRoutes");
+const userRoutes = require("./routes/User.routes");
+const productRoutes = require("./routes/Product.routes");
+const cartRoutes = require("./routes/Cart.routes");
 
 // Use routes
 app.use("/users", userRoutes);
