@@ -6,6 +6,9 @@ const userRoutes = require("./routes/User.routes");
 const productRoutes = require("./routes/Product.routes");
 const cartRoutes = require("./routes/Cart.routes");
 
+app.use(express.json());
+app.use(express.static('public'))
+
 // Use routes
 app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);

@@ -5,7 +5,7 @@ exports.getAllProducts = (req, res) => {
 };
 
 exports.addProduct = (req, res) => {
-  res.send("Adding a new product");
+  res.json({ value: req.body.productName });
 };
 
 exports.getProductById = (req, res) => {
